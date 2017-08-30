@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up Form</title>
+	<style type="text/css">
+		body {
+			background-image: url(3rd.jpg);
+			background-size: cover;
+		}
+		/* Inputs for username and password buttons */
+		input[type=text] , input[type=Password] {
+			width: 40%;
+			padding: 14px 22px;
+			margin: 8px 0px;
+			display: inline-block;
+			border: 2px solid green;
+		}
+		/* Input for submit button */
+		button{
+			background-color:transparent;
+		    color: red;
+		    padding: 14px 22px;
+		    margin: 8px 0;
+		    border: none;
+		    cursor: pointer;
+		}
+		/* div classes with some properties */
+		.fillers {
+			padding: 16px;
+		}
+		.buttons::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+	</style>
+</head>
+<body>
+	<H2> Sign up Form </H2> <!-- heading on the page -->
+	<form action=""/action_page.php" style="border:3px solid green"> <!-- form tag to create a form -->
+		<div class="fillers">
+			<label><b> First name </b></label> <!-- Firstname label to write the name -->
+			<input type="text" placeholder="Enter First name" name="First name" value="Annaya" disabled><br> <!--Disabled attribute is used-->
+
+			<label><b> Last name </b></label> <!-- Last name label to write the name -->
+			<input type="text" placeholder="Enter Last name" name="Last name" enabled><br>
+
+			<label><b> Email Id --</b></label> <!-- username label to write the name -->
+			<input type="text" placeholder="Enter email id" name="Email Id " required ><br> <!--required attribute is used means this field is necessary to fill-->
+
+			<label><b> Password </b></label>
+			<input type="Password" placeholder="Enter Password" name="paswrd" maxlength="8"> <!-- Max length attribute is used to make meximum length of password to 8 -->
+			<br>
+			<input type="checkbox" checked="checked"> Remember me
+			<p> I agree to the <a href="#">Terms & Conditions</a></p>
+		</div>
+		<div class="buttons"></div>
+		<button type=" Submit " class="signup_button"><b>Submit</b> </button>
+	</form>
+
+</body>
+</html>
